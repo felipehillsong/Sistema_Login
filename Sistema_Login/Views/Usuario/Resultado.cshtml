@@ -1,0 +1,55 @@
+﻿@model Sistema_Login.Models.Usuario
+
+@{
+    ViewBag.Title = "Resultado";
+}
+
+<h2>Resultados dos Usuarios</h2>
+
+<h3>Usuário Cadastrado</h3>
+
+<div class="editor-label">
+    <b>@Html.DisplayNameFor(x => x.Nome)</b>
+</div>
+<div class="editor-field">
+    <input type="text" name="name" class="form-control" readonly value="@Html.DisplayFor(x => x.Nome)" />
+</div>  <br />
+<div class="editor-label">
+    <b>@Html.DisplayNameFor(x => x.Idade)</b>
+</div>
+<div class="editor-field">
+    <input type="number" name="name" class="form-control" readonly value="@Html.DisplayFor(x => x.Idade)" />
+</div>   <br />
+<div class="editor-label">
+    <b>@Html.DisplayNameFor(x => x.Login)</b>
+</div>
+<div class="editor-field">
+    <input type="text" name="name" class="form-control" readonly value="@Html.DisplayFor(x => x.Login)" />
+</div>    <br />
+<div class="editor-label">
+    <b>@Html.DisplayNameFor(x => x.Email)</b>
+</div>
+<div class="editor-field">
+    <input type="text" name="name" class="form-control" readonly value="@Html.DisplayFor(x => x.Email)" />
+</div>  <br />
+<div class="editor-label">
+    <b>@Html.DisplayNameFor(x => x.Senha)</b>
+</div>
+<div class="editor-field">
+    <input type="text" name="name" class="form-control" readonly value="@Html.DisplayFor(x => x.Senha)" />
+</div>    <br />
+<div class="editor-label">
+    <b>@Html.DisplayNameFor(x => x.ConfirmarSenha)</b>
+</div>
+<div class="editor-field">
+    <input type="text" name="name" class="form-control" readonly value="@Html.DisplayFor(x => x.ConfirmarSenha)" />
+</div>  <br />
+<div class="editor-label">
+    <b>@Html.DisplayNameFor(x => x.Observacoes)</b>
+</div>
+<div class="editor-field">
+    <input type="text" name="name" class="form-control" readonly value="@Html.DisplayFor(x => x.Observacoes)" />
+</div>  <br />
+<div>
+    @Html.ActionLink("Voltar", "Validacao", "Usuario", new { @class = "btn btn-primary btn-large" })
+</div>

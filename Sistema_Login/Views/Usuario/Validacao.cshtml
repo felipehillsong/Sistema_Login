@@ -1,0 +1,66 @@
+﻿@model Sistema_Login.Models.Usuario
+
+@{
+    ViewBag.Title = "Validação";
+}
+
+<h2>Validação de Usuarios</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <h3>Dados do Usuário</h3>
+    <div class="editor-label">
+        @Html.LabelFor(x => x.Nome)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(x => x.Nome, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(x => x.Nome)
+    </div>
+    <div class="editor-label">
+        @Html.LabelFor(x => x.Idade)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(x => x.Idade, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(x => x.Idade)
+    </div>
+    <div class="editor-label">
+        @Html.LabelFor(x => x.Login)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(x => x.Login, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(x => x.Login)
+    </div>
+    <div class="editor-label">
+        @Html.LabelFor(x => x.Email)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(x => x.Email, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(x => x.Email)
+    </div>
+    <div class="editor-label">
+        @Html.LabelFor(x => x.Senha)
+    </div>
+    <div class="editor-field">
+        @Html.PasswordFor(x => x.Senha, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Senha)
+    </div>
+    <div class="editor-label">
+        @Html.LabelFor(x => x.ConfirmarSenha)
+    </div>
+    <div class="editor-field">
+        @Html.PasswordFor(x => x.ConfirmarSenha, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.ConfirmarSenha)
+    </div>
+    <div class="editor-label">
+        @Html.LabelFor(x => x.Observacoes)
+    </div>
+    <div class="editor-field">
+        @Html.TextAreaFor(x => x.Observacoes, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Observacoes)
+    </div><br />
+    <button type="submit" class="btn btn-primary btn-large">Cadastrar</button>
+    @section Scripts{
+        @Scripts.Render("~/bundles/jqueryval");
+}
+}
